@@ -3,15 +3,16 @@ extern crate hyper;
 use std::io::Read;
 
 use hyper::Client;
-use hyper::header::Connection;
+use hyper::header::{Connection, UserAgent};
 
 fn main() {
     // Create a client.
-    let mut client = Client::new();
+    let client = Client::new();
 
     // Creating an outgoing request.
     let mut res = client.get("http://lsanca-speedtest-01-a.socal.rr.com/speedtest/random4000x4000.jpg")
         // set a header
+        .header(UserAgent("hyper/speedtest-rust 0.01".to_owned()))
         .header(Connection::close())
         // let 'er go!
         .send().unwrap();
