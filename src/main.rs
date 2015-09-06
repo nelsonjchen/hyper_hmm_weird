@@ -10,7 +10,7 @@ fn main() {
     let mut client = Client::new();
 
     // Creating an outgoing request.
-    let mut res = client.get("http://rust-lang.org/")
+    let mut res = client.get("http://lsanca-speedtest-01-a.socal.rr.com/speedtest/latency.txt")
         // set a header
         .header(Connection::close())
         // let 'er go!
