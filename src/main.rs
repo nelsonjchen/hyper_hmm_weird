@@ -18,7 +18,7 @@ fn main() {
         .send().unwrap();
 
     // Read the Response.
-    let mut body: Vec<u8>= vec!();
+    let mut body: Vec<u8> = vec!();
     res.read(&mut body).unwrap();
 
     println!("Response: {:?}", body);
