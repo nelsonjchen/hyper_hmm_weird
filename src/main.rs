@@ -12,13 +12,14 @@ fn main() {
     // http://lsanca-speedtest-01-a.socal.rr.com/speedtest/latency.txt # FAIL
     // http://speedtest.lax2.hostduplex.com/speedtest/latency.txt # SUCCESS
     let urls = vec!(
-        "http://lsanca-speedtest-01-a.socal.rr.com/speedtest/latency.txts",
+        "http://lsanca-speedtest-01-a.socal.rr.com/speedtest/latency.txt",
         "http://speedtest.lax2.hostduplex.com/speedtest/latency.txt",
         "http://speedtest.lax.hugeserver.com/speedtest/latency.txt",
         "http://speedtest.lax.gigenet.com/speedtest/latency.txt",
         "http://ndt.dhspeedtest.com/flash/speedtest/latency.txt",
         "http://google.com",
         "http://gamefaqs.com",
+        "http://rust-lang.org",
         );
     for url in urls.iter() {
         let client = Client::new();
