@@ -32,7 +32,7 @@ fn main() {
 
         // Read the Response.
         let mut body: Vec<u8> = vec!();
-        let read_res = res.read(&mut body);
+        let read_res = res.read_to_end(&mut body);
 
         println!("Read Result for {}: {:?}", url, read_res);
     }
